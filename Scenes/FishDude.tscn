@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://graphics/fish_guy_sheet_c.png" type="Texture" id=1]
 
@@ -60,23 +60,10 @@ animations = [ {
 "speed": 4.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=10]
-radius = 73.8042
-height = 443.948
-
-[node name="FishDude" type="KinematicBody2D"]
+[node name="FishDude" type="Node2D"]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 9 )
 animation = "idle"
-frame = 1
 playing = true
 flip_h = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2( 36.5533, 19.0704 )
-shape = SubResource( 10 )
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( 7.17645, -275.12, 67.4977, -268.771, 100.833, -235.435, 97.6583, -156.065, 50.0363, -119.555, 23.0504, -116.38, 24.6378, -84.6324, 48.4489, -89.3946, 62.7355, 7.43689, 123.057, 67.7581, 140.024, 142.774, 67.4977, 312.218, -61.0818, 316.98, -69.0188, 282.057, -21.3968, 116.968, -34.096, -71.9331, -9.36786, -119.838, -46.7952, -165.59, -38.8582, -237.023, 6.84822, -275.065 )
