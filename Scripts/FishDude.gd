@@ -5,8 +5,8 @@ var isFacingRight = true
 
 const UP = Vector2(0, -1)
 const SPEED = 300
-const JUMP_SPEED = 1300
-const GRAVITY = 150
+const JUMP_SPEED = 1500
+const GRAVITY = 120
 
 func _physics_process(delta):
 	fall()
@@ -23,7 +23,7 @@ func fall():
 		velocity.y += GRAVITY
 
 func jump():
-	if is_on_floor() and Input.is_action_just_pressed("Jump"):
+	if is_on_floor() and Input.is_action_pressed("Jump"):
 		velocity.y -= JUMP_SPEED
 
 func move():
